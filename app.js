@@ -6,22 +6,18 @@ document
   .querySelector('#get-chars')
   .addEventListener('click', async function (e) {
     const container = document.querySelector('#all-chars');
-    const chars = await Character.all();
-    chars.results.map((char) => {
-      const character = new Character(char);
-      container.appendChild(character.getBar());
-    });
+    const allCharacters = await Character.all();
+    console.log(allCharacters);
+    //you code here
   });
 
 document
   .querySelector('#get-episodes')
   .addEventListener('click', async function (e) {
     const container = document.querySelector('#all-episodes');
-    const chars = await Episode.all();
-    chars.results.map((obj) => {
-      const episode = new Episode(obj);
-      container.appendChild(episode.getBar());
-    });
+    const allEpisodes = await Episode.all();
+    console.log(allEpisodes);
+    // you code here
   });
 
 document
@@ -30,8 +26,5 @@ document
     const container = document.querySelector('#all-locations');
     const allLocations = await Location.all();
     console.log(allLocations);
-    allLocations.results.map((obj) => {
-      const location = new Location(obj);
-      container.appendChild(location.getBar());
-    });
+    // you code here
   });
